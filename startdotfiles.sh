@@ -6,3 +6,6 @@ source ${HOME}/dotfiles/multi-cluster-config/export-kubeconfig
 source <(kubectl completion bash)
 alias k=kubectl
 complete -F __start_kubectl k
+
+# add kubefix to path
+export PATH=~/dotfiles/kubefix/:$PATH

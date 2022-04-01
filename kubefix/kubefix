@@ -1,0 +1,41 @@
+#!/usr/bin/env python3
+
+import argparse
+import sys
+import yaml
+
+parser = argparse.ArgumentParser()
+parser.add_argument('--server', nargs='?', type=str,
+                     help='Change the server to SERVER.')
+parser.add_argument('--keep-user', action='store_true',
+                     help='Do not change the user.')
+parser.add_argument('context', nargs=1, type=str,
+                     help='The new context to set.')
+parser.add_argument('file', nargs='?', type=argparse.FileType('r'), default=sys.stdin,
+                    help='Input file. Standard input will be used if not given.')
+args = parser.parse_args()
+
+root = yaml.safe_load(args.file)
+if len(root['clusters']) != 1:
+	print("Error: Need exactly one cluster.")
+	exit(1)
+if len(root['contexts']) != 1:
+	print("Error: Need exactly one contexts.")
+	exit(1)
+if len(root['users']) != 1:
+	print("Error: Need exactly one user.")
+	exit(1)
+cluster = root['clusters'][0]
+context = root['contexts'][0]
+user = root['users'][0]
+
+cluster['name'] = args.context[0]
+context['cluster'] = args.context[0]
+if args.server:
+	cluster['cluster']['server'] = args.server
+if not args.keep_user:
+	newuser = args.context[0] + '-' + context['context']['user']
+	user['name'] = newuser
+	context['context']['user'] = newuser
+
+yaml.dump(root, sys.stdout)

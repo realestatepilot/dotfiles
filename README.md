@@ -33,6 +33,12 @@ Tools will create `~/.kube-multi` directory. Put your cluster configfiles into t
 
 'k' set as alias for kubectl and enable bash completion with 'tab'
 
+## kubefix
+
+Needs installed python3.
+
+Rename contexts and clusters in a kubectl config file. See `kubefix -h` for details.
+
 # Credits
 
 Most of thees snippets are collected from other authors.
