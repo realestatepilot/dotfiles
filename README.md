@@ -1,17 +1,17 @@
-# Summary for tgrunert-dotfiles 
+# Summary for dotfiles 
 
 Small tools for shell to make k8s admin life easier. 
 Most solutions tested with Ubuntu and Git Bash for Windows.
 
 # Usage
 
-1. Checkout this repo into ~/tgruenert-dotfiles.
+1. Checkout this repo into ~/dotfiles.
 
 2. Define auto startup
 
 Add 
 ```
-source ~/tgruenert-dotfiles/startdotfiles.sh
+source ~/dotfiles/startdotfiles.sh
 ```
 at end of your ~/.bashrc
 
