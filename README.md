@@ -29,6 +29,8 @@ Credits to https://github.com/GeertJohan/kube-multi-config
 
 Tools will create `~/.kube-multi` directory. Put your cluster configfiles into this directory and restart your shell. kubectl will recognize the new files. To remove config-files just remove it from this directory. kubectl will recognize this immediately.
 
+If `~/.kube-shared` directory exists theese file will also merged into $KUBECONFIG environemnt variable. This can be used to share configs with other team members seperated from private config files.
+
 ## kubectl alias
 
 'k' set as alias for kubectl and enable bash completion with 'tab'
