@@ -31,6 +31,8 @@ Tools will create `~/.kube-multi` directory. Put your cluster configfiles into t
 
 If `~/.kube-shared` directory exists theese file will also merged into $KUBECONFIG environemnt variable. This can be used to share configs with other team members seperated from private config files.
 
+Config files must name *.yaml or *.yml.
+
 ## kubectl alias
 
 'k' set as alias for kubectl and enable bash completion with 'tab'
