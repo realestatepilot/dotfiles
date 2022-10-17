@@ -43,6 +43,10 @@ Needs installed python3.
 
 Rename contexts and clusters in a kubectl config file. See `kubefix -h` for details.
 
+## Hashicorps Vault CLI 
+
+This CLI dont work under Windows git bash for login. See https://github.com/hashicorp/vault/issues/4946#issuecomment-695457902 for a hack. This is integrated in theese dot-files.
+
 # Credits
 
 Most of thees snippets are collected from other authors.
