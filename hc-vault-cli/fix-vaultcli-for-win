@@ -1,0 +1,9 @@
+#!/bin/bash
+
+# see https://github.com/hashicorp/vault/issues/4946#issuecomment-695457902
+
+if [[ "$OSTYPE" == "msys" ]]; then
+  # Lightweight shell and GNU utilities compiled for Windows (part of MinGW)
+  vault() { if [[ $@ == "login" ]]; then command winpty vault login; else command vault "$@"; fi; }
+fi
+
