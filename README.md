@@ -20,6 +20,22 @@ at end of your ~/.bashrc
 Start a new shell and use it. See separate chapters for functions.
 
 
+## Requirements MacOS x
+
+* using bash (zsh untested)
+* installed brew
+
+```
+brew install bash-completion 
+```
+add to ~/.basrc
+```
+if [ -f $(brew --prefix)/etc/bash_completion ]; then
+  . $(brew --prefix)/etc/bash_completion
+fi
+```
+
+
 # Functions
 
 ## multi-cluster-config

@@ -5,6 +5,8 @@ source ${HOME}/dotfiles/multi-cluster-config/export-kubeconfig
 # tweak kubectl handling
 source <(kubectl completion bash)
 alias k=kubectl
+
+# completion also for alias `k`
 complete -F __start_kubectl k
 
 # add kubefix to path
