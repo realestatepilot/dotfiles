@@ -13,4 +13,4 @@ alias k=kubectl
 # export PATH=~/dotfiles/kubefix/:$PATH
 
 # # fix vault cli login
-source ${HOME}/dotfiles/hc-vault-cli/fix-vaultcli-for-win
+# source ${HOME}/dotfiles/hc-vault-cli/fix-vaultcli-for-win
