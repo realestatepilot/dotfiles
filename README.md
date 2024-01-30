@@ -22,7 +22,7 @@ Start a new shell and use it. See separate chapters for functions.
 
 ## Requirements MacOS x
 
-* using bash (zsh untested)
+### using bash
 * installed brew
 
 ```
@@ -35,6 +35,11 @@ if [ -f $(brew --prefix)/etc/bash_completion ]; then
 fi
 ```
 
+### using zsh
+* installed brew
+```
+brew install zsh-completion 
+```
 
 # Functions
 
